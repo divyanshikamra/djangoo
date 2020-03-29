@@ -1,0 +1,155 @@
+body{
+  background-color:black;
+  height=100%;
+  background-repeat-y:no-repeat;
+  color: #ede9eb;
+}
+
+body *{
+  font-family : cursive;
+  font-weight: 600;
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: bold;
+  margin:0;
+}
+
+a,a:hover,a:visited{
+  color: #fb0493;
+  text-decoration: none;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+}
+
+nav{
+    justify-self: end;
+    font-size: 1.3em;
+
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 20px;
+}
+
+.sit{
+  margin-top: 60px;
+  border: 1px solid #04fb22;
+  color: #04fb22;
+  padding: 20px;
+}
+
+.sit input, .sit textarea{
+  display:block;
+  margin:10px 0 0 0;
+  padding: 5px;
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.article{
+    padding: 10px;
+    border: 2px solid #fb0493;
+    position: relative;
+}
+
+.article h2{
+    font-size: 1.2em;
+}
+
+.article-detail .article{
+  padding: 0;
+
+}
+
+.article .author{
+  padding: 10px;
+  background: #fb0493;
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #160105;
+}
+
+.article-detail .article img{
+  margin: auto 75px;
+  margin-width: 100%;
+}
+
+.article-detail .article h2{
+  text-align:center;
+  margin: 20px auto;
+  font-size: 2em;
+}
+
+.article-detail .article p{
+  text-align:center;
+}
+
+.site-form{
+  margin-top: 60px;
+  border: 1px solid #fb0493;
+  padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+  display:block;
+  margin:20px 0 0 0;
+  padding: 10px;
+}
+
+a.highlight{
+  border: 1px solid #fb0493;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.helptext, .helptext ul{
+  margin: 0 auto 20px;
+  color: #bbb;
+  font-size: 0.9em;
+  display:block;
+}
+
+.errorlist{
+  padding:0;
+}
+
+.site-form input[type="submit"]{
+  background: #fb0493;
+  border: 0;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius:4px;
+  margin: 10px 0;
+}

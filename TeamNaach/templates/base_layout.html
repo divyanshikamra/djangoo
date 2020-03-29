@@ -1,0 +1,37 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Articles</title>
+   <link rel="stylesheet" href="{%static 'styles.css'%}" />
+ </head>
+ <body>
+   <header class="wrapper">
+     <h1><a href="{% url "home" %}"><img src="{% static 'logo.jpg' %}", height='120', width='120'></a></h1>
+     <h2>Welcome To 'Team Naach' Community</h2>
+     <nav>
+       <ul>
+         {% if user.is_authenticated %}
+        <li>
+         <form class="logout-link" action="{% url "accounts:logout" %}" method="post">
+             {% csrf_token %}
+             <button type="submit">LogOut</button>
+         </form>
+        </li>
+        <li><a href="{% url 'create' %}" class="highlight">Add a new blog</a></li>
+        <li><a href="{% url 'loggedin' %}">Dashboard</a></li>
+         {% else %}
+           <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
+         {% endif %}
+       </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+     {% include "articles/messages.html" %}
+     {% block content %}
+     {% endblock %}
+    </div>
+  </body>
+</html>

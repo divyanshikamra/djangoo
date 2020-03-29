@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+{% csrf_token %}
+  <h3>Let's add some blogs :) </h3>
+  <br><br>
+  <h2>Your Blogs:</h2>
+    <div class="articles">
+      {% for article in articles %}
+       {% if article.author == User %}
+        <div class="article">
+         <h2><a href= "{% url 'detail' slog=article.slog %}"> {{article.title}}</a></h2>
+         <p> {{article.snippet}}</p>
+         <p> {{article.date}}</p>
+         <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+   </div>
+
+{% endblock %}

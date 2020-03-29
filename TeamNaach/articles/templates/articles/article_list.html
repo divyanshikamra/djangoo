@@ -1,0 +1,31 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<hr>
+<div class="sit" align ="center">
+   <h2> Log In</h2><br>
+   <form class="col" method="post">
+     {% csrf_token %}
+     {{form}}
+     {% if request.GET.next %}
+      <input type="hidden" name="next" value="{{request.GET.next}}">
+     {% endif %}
+     <input type="submit" value="LogIn">
+     </form>
+</div><hr>
+   <h2>Member's Blogs:</h2><br><br>
+<div class="row">
+  <div class="articles">
+     {% for article in articles %}
+      <div class="article">
+        <h2><a href= "{% url 'detail' slog=article.slog %}"> {{article.title}}</a></h2>
+        <p> {{article.snippet}}</p>
+        <p> {{article.date}}</p>
+        <p class="author" >added by {{ article.author.username }}</p>
+        <br>
+      </div>
+     {% endfor %}
+  </div>
+  <hr>
+
+{% endblock %}

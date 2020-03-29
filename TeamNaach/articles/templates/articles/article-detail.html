@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="article-detail">
+  <div class='article'>
+    <img src="{{article.thumb.url}}", height='300', width='800'/>
+    <h2>{{article.title}}</h2>
+    <p style= overflow-x:hidden >{{article.body}}</p>
+    <p>{{article.date}}</p>
+    {% if user.is_authenticated %}
+      <p><a href="{% url 'edit' slog=article.slog %}">EDIT</a></p>
+      <p><a href="{% url 'delete' slog=article.slog %}">DELETE</a></p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
