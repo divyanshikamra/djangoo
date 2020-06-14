@@ -1,6 +1,7 @@
 # djangoo
 
 ### This is a dynamic blog website made by me using django.
+I made this website for the DevCom Recruitment round 2 which i cleared via this
 
 **Brief Description**
 - On the landing page one can login/signup and post new blogs or edit/delete his blogs via his account
