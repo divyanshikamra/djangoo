@@ -1,6 +1,6 @@
 # djangoo
 
-###This is a dynamic blog website made by me using django.
+### This is a dynamic blog website made by me using django.
 
 **Brief Description**
 - On the landing page one can login/signup and post new blogs or edit/delete his blogs via his account
